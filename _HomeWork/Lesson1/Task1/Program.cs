@@ -12,10 +12,13 @@ System.Console.WriteLine("Решение задачи: ");
 int a1 = 5; // Первое число
 int b1 = 7; // Второе число
 
-if (a1 > b1) {
+if (a1 > b1)
+{
     System.Console.WriteLine("max = a1");
     System.Console.WriteLine("min = b1");
-} else {
+}
+else
+{
     System.Console.WriteLine("max = b1");
     System.Console.WriteLine("min = a1");
 }
@@ -31,12 +34,44 @@ System.Console.WriteLine("Решение задачи: ");
 int a2 = -3; // Первое число
 int b2 = -9; // Второе число
 
-if (a2 > b2) {
+if (a2 > b2)
+{
     System.Console.WriteLine("max = a2");
     System.Console.WriteLine("min = b1");
-} else {
+}
+else
+{
     System.Console.WriteLine("max = b1");
     System.Console.WriteLine("min = a1");
 }
 
+System.Console.WriteLine("");
+System.Console.WriteLine("");
+
+
+System.Console.Write("Вариант с возможностью ввода произвольных чисел");
+
+int Prompt(string message)
+{
+    System.Console.WriteLine(message);
+    string ReadValue = Console.ReadLine();
+    int result = int.Parse(ReadValue);
+    return result;
+};
+System.Console.WriteLine("");
+int numberA = Prompt("Введите первое число: ");
+
+System.Console.WriteLine("Первое число : " + numberA);
+
+System.Console.WriteLine("");
+int numberB = Prompt("Введите второе число: ");
+
+System.Console.WriteLine("Первое число : " + numberB);
+
+System.Console.WriteLine("");
+if (numberA > numberB) {
+    System.Console.WriteLine("Первое число (" + numberA + ") больше второго числа (" + numberB + ")");
+} else {
+    System.Console.WriteLine("Второе число (" + numberB + ") больше первого числа (" + numberA + ")");
+}
 
