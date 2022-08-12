@@ -6,7 +6,7 @@
 
 
 Console.Clear();
-System.Console.Write("Задача 1: Напишите программу, которая на вход принимает два числа и выдаёт, какое число большее, а какое меньшее. a = 5; b = 7 ->  max = 7, min = 5");
+System.Console.Write("Задача 1: Напишите программу, которая на вход принимает два числа и выдаёт, какое число большее, а какое меньшее. a1 = 5; b1 = 7");
 System.Console.WriteLine("");
 System.Console.WriteLine("Решение задачи: ");
 int a1 = 5; // Первое число
@@ -23,10 +23,9 @@ if (a1 > b1) {
 
 System.Console.WriteLine("");
 System.Console.WriteLine("");
-System.Console.WriteLine("");
-System.Console.WriteLine("");
 
-System.Console.Write("Задача 1: Напишите программу, которая на вход принимает два числа и выдаёт, какое число большее, а какое меньшее. a = -3; b = -9 ->  max = -3, min = -9");
+
+System.Console.Write("Задача 1.2: Напишите программу, которая на вход принимает два числа и выдаёт, какое число большее, а какое меньшее. a2 = -3; b2 = -9");
 System.Console.WriteLine("");
 System.Console.WriteLine("Решение задачи: ");
 int a2 = -3; // Первое число
