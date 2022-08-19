@@ -34,5 +34,20 @@ string convertText(string text, char oldValue, char newValue)
 }
 
 
-string newText = convertText(text, 'к', 'К');
-System.Console.WriteLine(newText);
+//string newText = convertText(text, 'к', 'К');
+//System.Console.WriteLine(newText);
+
+int[] arr = { 1, 2, 7, 5, 6, 8, 3, 4, 8 };
+
+void printArray(int[] array)
+{
+    int length = array.Length;
+
+    for (int i=0; i < length; i++)
+    {
+        System.Console.Write($"{array[i]} ");
+    }
+    System.Console.WriteLine();
+}
+
+printArray(arr);
