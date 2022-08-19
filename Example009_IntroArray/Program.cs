@@ -11,7 +11,7 @@ int findMaxNumber(int num1, int num2, int num3)  //Метод для поиск�
 int[] ArrayNumber = { 19, 29, 43, 64, 75, 26, 17, 81, 29 };
 int N = ArrayNumber.Length; //длинна массива
 int ArrayIndex = 0; //Начальный индекс массива
-int findNumber = 29;
+int findNumber = 17;
 
 
 while (ArrayIndex < N)
@@ -21,7 +21,8 @@ while (ArrayIndex < N)
         System.Console.WriteLine(ArrayIndex);
         break; //По условию задачи нужно найти первое совпавшее число, данный оператор прерывает выполнение
     }
-    ArrayIndex++;
+    else
+        ArrayIndex++;
 }
 
 

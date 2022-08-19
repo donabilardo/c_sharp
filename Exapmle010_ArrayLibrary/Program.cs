@@ -25,15 +25,21 @@ void prinTnewArray(int[] printCollection)
 
 }
 
-int findIndexArray(int[] findCollection)
+int indexOf(int[] findCollection, int find)
 {
-    int indexFindCollection = 0;
-    int lenghtFindIndexCollection = findCollection.Length;
-    while (indexFindCollection < lenghtFindIndexCollection)
+    int lengthFindCollection = findCollection.Length;
+    int indexFindeCollection = 0;
+    int positionFindCollection = -1;
+    while (indexFindeCollection < lengthFindCollection)
     {
-        System.Console.WriteLine("+");
+        if (findCollection[indexFindeCollection] == find)
+        {
+            positionFindCollection = indexFindeCollection;
+            break;
+        }
+        indexFindeCollection++;
     }
-
+    return positionFindCollection;
 }
 
 int[] array = new int[10];
@@ -42,4 +48,5 @@ newArray(array);
 prinTnewArray(array);
 System.Console.WriteLine("------------------------");
 
-
+int pos = indexOf(array, 4);
+System.Console.WriteLine(pos);
