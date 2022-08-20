@@ -27,7 +27,8 @@ int getRandomDigit(int start, int end) //Метод получения случ�
         System.Console.WriteLine("Числа равны или они меньше 0");
         return numMax;
     }
-    else if (numStart > numEnd)
+
+    if (numStart > numEnd)
     {
         numMax = numStart;
         System.Console.Write($"Случайное число: " + randomDigit);
@@ -38,6 +39,7 @@ int getRandomDigit(int start, int end) //Метод получения случ�
     else
     {
         numMax = numEnd;
+        System.Console.Write($"Случайное число: " + randomDigit);
         System.Console.WriteLine(String.Empty);
         System.Console.Write($"Максимальное число :" + numMax);
     }
@@ -48,4 +50,4 @@ int getRandomDigit(int start, int end) //Метод получения случ�
 
 
 
-System.Console.Write("Случайное число: " + getRandomDigit(10, 99));
+getRandomDigit(10, 99);
