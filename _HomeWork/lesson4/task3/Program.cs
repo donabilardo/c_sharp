@@ -23,15 +23,16 @@ int EndArr = Prompt("Конечное значение, для диапазон�
 Console.Clear();
 
 
-int GetArr(int len, int start, int end)
-{
-    int[] newArr = new int[len];
-    for (int i = 0; i < len; i++)
+
+
+
+  int[] newArr = new int[LenArr];
+    for (int i = 0; i < LenArr; i++)
     {
-        newArr[i] = new Random().Next(start, end);
-        System.Console.WriteLine(newArr[i]);
+        newArr[i] = new Random().Next(SatrtArr, EndArr);
+        System.Console.WriteLine($"Индекс массива ({i}) значение = {newArr[i]}");
     }
-    return newArr[];
-}
+
+
 
 
