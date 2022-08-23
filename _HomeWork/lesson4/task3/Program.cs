@@ -15,20 +15,27 @@ int Prompt(string message)
 }
 
 
-void GetRandomArray(int LenArr, int SatrtArr, int EndArr) // метод для получения и вывода значений массива
+int[] GetRandomArray(int LenArr, int SatrtArr, int EndArr) // метод для получения случайных значений массива
 {
     int[] newArr = new int[LenArr]; // обьявляем массив
+
     for (int i = 0; i < LenArr; i++)
     {
         newArr[i] = new Random().Next(SatrtArr, EndArr); // заполняем случайными цифрами из диапазона SatrArr до EndArr
-        System.Console.WriteLine($"Индекс массива ({i}) значение = {newArr[i]}"); //вывод значения массива
     }
     System.Console.WriteLine(String.Empty);
+    return newArr;
 }
 
-
-
-
+void PrintArray(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        System.Console.WriteLine($"Индекс массива ({i}) значение = {array[i]}"); //вывод значения массива
+    }
+    System.Console.WriteLine("_____________________________________");
+    System.Console.WriteLine(String.Empty);
+}
 
 
 
@@ -40,5 +47,6 @@ Console.Clear();
 int EndArr = Prompt("Конечное значение, для диапазона случайного числа:");
 Console.Clear();
 
-GetRandomArray(LenArr, SatrtArr, EndArr);
+int[] newArr = GetRandomArray(LenArr, SatrtArr, EndArr); //заполнение массива случаными числами 
 
+PrintArray(newArr); // вывод массива
