@@ -15,18 +15,18 @@ int Prompt(string message)
     return result; //возвращаем результат
 }
 
-int[] GetArray(int GetArrayLength)
+int[] GetArray(int GetArrayLength)  // метод получения массива
 {
     int[] RandomArray = new int[GetArrayLength];
     for (int i = 0; i < GetArrayLength; i++)
     {
-        RandomArray[i] = new Random().Next(100, 999);
+        RandomArray[i] = new Random().Next(100, 999); //диапазон чисел, по условию число должно быть 3-х значным
     }
     return RandomArray;
 }
 
 
-void PrintArray (int[] array){
+void PrintArray (int[] array){ //вывод значений массива
     for (int i = 0; i < array.Length; i++){
         System.Console.WriteLine($"Индекс ({i}) - Значение = {array[i]}");
     }
@@ -35,7 +35,7 @@ void PrintArray (int[] array){
 }
 
 
-int CheckArray (int[] array){
+int CheckArray (int[] array){ // проверка значений массива на чётность
     int result = 0;
     for (int i = 0; i < array.Length; i++){
         if (array[i] % 2 == 0) {
@@ -47,9 +47,9 @@ int CheckArray (int[] array){
 
 
 
-int LenArr = Prompt("Длина массива: ");
+int LenArr = Prompt("Длина массива: "); //запрашиваем длинну массива
 Console.Clear();
-int[] newArr = GetArray(LenArr);
-PrintArray(newArr);
-System.Console.WriteLine($"Количество чётных элементов: {CheckArray(newArr)}");
+int[] newArr = GetArray(LenArr); // метод генерации массива
+PrintArray(newArr); // метод печати массива
+System.Console.WriteLine($"Количество чётных элементов: {CheckArray(newArr)}"); // вывод результат для  решения задачи
 System.Console.WriteLine(String.Empty);
