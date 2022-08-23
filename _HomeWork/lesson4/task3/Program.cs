@@ -37,6 +37,32 @@ void PrintArray(int[] array)
     System.Console.WriteLine(String.Empty);
 }
 
+int SearchMaxNumber(int[] array)
+{ // метод для поиска второго по величине максимального числа из массива
+
+    int max1 = array[0]; //первое максимальное число
+    int max2 = array[0]; // второе максимальное число
+
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] > max1)
+        {
+            max1 = array[i];
+        }
+    }
+
+    for (int j = 0; j < array.Length; j++)
+    {
+        if (array[j] > max2 && array[j] < max1)
+        {
+            max2 = array[j];
+        }
+    }
+    return max2;
+
+}
+
+
 
 
 
@@ -50,3 +76,5 @@ Console.Clear();
 int[] newArr = GetRandomArray(LenArr, SatrtArr, EndArr); //заполнение массива случаными числами 
 
 PrintArray(newArr); // вывод массива
+
+System.Console.WriteLine($"Второе максимальное число: {SearchMaxNumber(newArr)}"); // Поиск и вывод второго максимального числа из массива
