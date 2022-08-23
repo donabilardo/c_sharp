@@ -52,3 +52,4 @@ Console.Clear();
 int[] newArr = GetArray(LenArr);
 PrintArray(newArr);
 System.Console.WriteLine($"Количество чётных элементов: {CheckArray(newArr)}");
+System.Console.WriteLine(String.Empty);
