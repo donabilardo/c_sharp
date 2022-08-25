@@ -5,32 +5,33 @@
 
 Console.Clear();
 
-int Prompt(string message){
+int Prompt(string message)
+{
     System.Console.WriteLine(message);
     string ReadValue = System.Console.ReadLine();
     int result = int.Parse(ReadValue);
     return result;
 }
 
-
+int M = Prompt("Введите количество цифр. для подсчёта"); // количество чисел которые нужноо ввести пользователю
 
 System.Console.WriteLine("Введите поочередно 10 цифр");
 
-
-int i = 1; // сколько нужно ввести цифр
-int count = 0; // сколько введенных цифр больше 0
-int M = 10; // количество чисел которые нужноо ввести пользователю
-while (i <= M) {
-int InputDigit = Prompt ($"Введите {i} число"); // получаем построчно числа
-    i++;
-    if (InputDigit > 0) {
-        count = count + 1;
+int CountDigit()
+{
+    int i = 1; // сколько осталось ввести цифр
+    int count = 0; // сколько введенных цифр больше 0
+    while (i <= M)
+    {
+        int InputDigit = Prompt($"Введите {i} число"); // получаем построчно числа
+        i++;
+        if (InputDigit > 0)
+        {
+            count = count + 1;
+        }
     }
+    return count;
 }
 
-
-
-
-
 Console.Clear();
-System.Console.WriteLine($"Пользователь ввел {count} чисел больше 0"); //вывод количества введеных чисел, которые больше 0
+System.Console.WriteLine($"Пользователь ввел {CountDigit()} чисел больше 0"); //вывод количества введеных чисел, которые больше 0
