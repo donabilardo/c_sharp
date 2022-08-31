@@ -46,7 +46,7 @@ void PrintArray(int[,] array)  // метод для печати массива 
     }
 }
 
-void ShowColumnAverage(int[,] array) 
+void ColumnAvg(int[,] array) 
 {
     double result = 0;
     for (int i = 0; i < array.GetLength(1); i++)
@@ -68,4 +68,4 @@ int[,] RandomArray = Random2Dim(rows,coll,1,9); //генерируем масс�
 PrintArray(RandomArray); // Выводим массив
 System.Console.WriteLine("");
 
-ShowColumnAverage(RandomArray);
+ColumnAvg(RandomArray);
