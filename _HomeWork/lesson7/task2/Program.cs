@@ -68,12 +68,17 @@ return count;
 }
 
 
+
 double[,] RandomArr = Random2Dim(5, 5, 1, 9);
 System.Console.WriteLine("Массив со случаными вещественными числами: ");
 PrintArray(RandomArr);//печать массива в консоль
 //параметры слева направо: число строкб число колонок, начальный и конечный диапазон для генерации случаных чисел для заполнения массива
 System.Console.WriteLine(String.Empty); // пустая строка для красоты
-double NumSearch = Prompt("Введите число для поиска"); // Вызываем функцию для запроса искомого числа
-System.Console.WriteLine(String.Empty); // пустая строка для красоты
+double NumSearch = Prompt("Введите число для поиска в массиве");
 int count = SearchNumInArray(RandomArr, NumSearch); //получаем количество найденных элементов в массиве
-System.Console.WriteLine($"Искомое число ({NumSearch}) встречается в массиве {count} раз"); //выводим результат
+System.Console.WriteLine($"Искомое число ({NumSearch}) встречается в массиве {count} раз"); //выводим результат */
+
+
+// Я похоже не правильно понял задание, поэтому дописываю второй вариант с теми же данными
+
+
