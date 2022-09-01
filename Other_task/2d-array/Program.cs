@@ -20,8 +20,6 @@ int Prompt(string message)//метод получения данных от по
 
 
 
-
-
 void PrintArray(int[,] matrix) // метод печати массива в консоль
 {
     for (int row = 0; row < matrix.GetLength(0); row++) //строки
@@ -48,16 +46,41 @@ void GetArray(int[,] matrix, int NumStart, int NumEnd)
 }
 
 
-void PrintImage (int[,] matrix){  // метод "закрашивания" у массива элементов со значением 0
-    for (int row = 0; row < matrix.GetLength(0); row++){
-        for(int col = 0; col<matrix.GetLength(1); col++){
-            if (matrix[row,col] == 0){ //если тут 0 то выводим пробел
+void PrintImage(int[,] matrix)
+{  // метод "закрашивания" у массива элементов со значением 0
+    for (int row = 0; row < matrix.GetLength(0); row++)
+    {
+        for (int col = 0; col < matrix.GetLength(1); col++)
+        {
+            if (matrix[row, col] == 0)
+            { //если тут 0 то выводим пробел
                 System.Console.Write(" ");
-            }else{
-                System.Console.Write("+");
             }
-        }System.Console.WriteLine();
+            else
+            {
+                System.Console.Write("1");
+            }
+        }
+        System.Console.WriteLine();
     }
+}
+
+
+void FillImage(int[,] pic, int row, int col)
+{
+    Console.ForegroundColor = ConsoleColor.Green; // устанавливаем цвет
+
+    if (pic[row, col] == 0){
+        pic[row, col] = 1;
+        FillImage(row-1,col);
+        FillImage(row, col -1);
+        FillImage(row+1,col);
+        FillImage(col+1,row);
+
+    }
+
+
+    Console.ResetColor(); // сбрасываем в стандартный
 }
 
 
@@ -87,5 +110,7 @@ int[,] pic = new int[,]
 {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0 },
 {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
 };
-PrintImage(pic); // вызываем метод для печати массива
+//PrintImage(pic); // вызываем метод для печати массива
+
+FillImage(13,13);
 
