@@ -25,13 +25,13 @@ bool Triangle(int num1, int num2, int num3)
 
 void Checktriangle(bool result)
 {
-    if (result == true)
+    if (result == false)
     {
-        System.Console.WriteLine("Треугольник существует");
+        System.Console.WriteLine("Треугольник НЕ существует");
     }
     else
     {
-        System.Console.WriteLine("Треугольника НЕ существует");
+        System.Console.WriteLine("Треугольника существует");
     }
 }
 
