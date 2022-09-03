@@ -75,7 +75,7 @@ FillArrayRandomNum(matrix);
 PrintArray(matrix);
 
 bool result = CheckLengthRowCol(matrix);
-if (result == false)
+if (result == false || row <= 0 || col <= 0)
 {
     System.Console.WriteLine("Замена значений невозможна, т.к. длинна строк и столбцов массива отличаются");
 }
