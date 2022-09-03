@@ -52,6 +52,20 @@ bool CheckLengthRowCol(int[,] array)// Проверка длинны строк 
     return true;
 }
 
+int[,] ReplaceRowToColumn(int[,] array) //замена стро и колонок в массиве
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = i; j < array.GetLength(1); j++)
+        {
+            int temp = array[i, j];
+            array[i, j] = array[j, i];
+            array[j, i] = temp;
+        }
+    }
+    return array;
+}
+
 int row = Prompt("Введите количество строк");
 Console.Clear();
 int col = Prompt("Введите количество колонок");
@@ -67,5 +81,8 @@ if (result == false)
 }
 else
 {
-    System.Console.WriteLine("Замена возможна, будем думать как это сделать )))");
+    // System.Console.WriteLine("Замена возможна, будем думать как это сделать )))");
+    System.Console.WriteLine("Измененный массив");
+
+    PrintArray(ReplaceRowToColumn(matrix));
 }
