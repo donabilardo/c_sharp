@@ -16,23 +16,31 @@ Console.Clear();
 
 
 
-int[] matrix = new int[] { 1, 4, 7, 2 };
+/* int[] matrix = new int[] { 1, 4, 7, 2 };
 
 
 for (int i = 0; i < matrix.Length; i++)
 {
     for (int j = 0; j < matrix.Length - 1; j++)
     {
-        if (matrix[j] > matrix[j + 1])
+        if (matrix[j] < matrix[j + 1])
         {
             int tmp = matrix[j];
             matrix[j] = matrix[j + 1];
             matrix[j + 1] = tmp;
         }
     }
-
-    System.Console.Write($"{matrix[i]}\t");
 }
 
 
+for (int i = 0; i < matrix.Length; i++)
+{
+    System.Console.Write($"{matrix[i]}\t");
+} */
 
+int[,] matrix = new int[,] { { 1, 4, 7, 2 }, { 5, 9, 2, 3 }, { 8, 4, 2, 4 } };
+
+
+
+
+for (int i = 0; i)
