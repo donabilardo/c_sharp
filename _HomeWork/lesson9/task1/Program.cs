@@ -21,34 +21,23 @@ int Prompt(string message)//метод получения данных от по
 #endregion
 
 
-int[] FindNum(int m, int n)
+void FindNum(int m, int n)
 {
-    int[] result;
-
-    return result;
+    if (m > n) return;
+    if (m % 2 == 0) System.Console.Write($"{m} ");
+    FindNum(m + 1, n);
 }
 
-void PrintArray(int[] array)
-{
-    for (int i = 0; i < array.Length; i++)
-    {
-        System.Console.Write($"{array[i]} \t");
-    }
-}
+
 
 
 int m = Prompt("Число M");
 int n = Prompt("Число N");
 
-if (m < n)
-{
-    System.Console.WriteLine("Число N не может быть меньше M");
-}
-else
-{
-    PrintArray(FindNum(m,n));
+
+    FindNum(m, n);
     System.Console.WriteLine("");
-}
+
 
 System.Console.WriteLine("Для выхода. нажмите любую клавишу...");
 Console.ReadKey();
